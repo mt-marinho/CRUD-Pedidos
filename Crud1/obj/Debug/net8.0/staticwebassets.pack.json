@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\add-box.svg"
     },
     {
+      "Id": "C:\\Users\\Matheus\\source\\repos\\Crud1\\Crud1\\wwwroot\\add.svg",
+      "PackagePath": "staticwebassets\\add.svg"
+    },
+    {
       "Id": "C:\\Users\\Matheus\\source\\repos\\Crud1\\Crud1\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

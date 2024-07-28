@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Index";
 }
+<!--
 <div id="btn-container">
     <p>
         <a id="add-btn" asp-action="Create">
@@ -10,21 +11,28 @@
         </a>
     </p>
 </div>
-
+-->
+<header>
+    <h3 id="titulo">Pedidos</h3>
+    <a id="add-btn"  asp-action="Create">
+        <img  src="~/add.svg" alt="Cadastrar" />
+    </a>
+</header>
+<div class="container-table">
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th style="padding-left: 17px;">
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Valor)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Vencimento)
+                Desconto
             </th>
             <th>
-                Status
+                @Html.DisplayNameFor(model => model.Vencimento)
             </th>
             <th>
                 
@@ -37,39 +45,40 @@
         
             <tr asp-action="Details" asp-route-id="@item.Id">
            
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
+            <td >
+               <a class="pad-left" id="details" asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Nome)</a>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Valor)
+               R$ @Html.DisplayFor(modelItem => item.Valor)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Vencimento.Date)
+                teste
             </td>
-                @if (item.PedidoStatus() == 1)
-                {
-                    <td>
-                        <p id="pendente">Pendente</p>
-                    </td>
-                }
-                @if (item.PedidoStatus() == 0)
-                {
-                    <td>
-                        <p id="vencido">Vencido</p>
-                    </td>
-                }
-                @if (item.PedidoStatus() == 2)
-                {
-                    <td>
-                        <p id ="valido">Valido</p> 
-                    </td>
-                }
             <td>
+                @Html.DisplayFor(modelItem => item.Vencimento)
+            </td>
+              
+            <td >
+
                 <div id="btn-container">
-                    <a asp-action="Edit" asp-route-id="@item.Id">
+
+                    @if (item.PedidoStatus() == 1)
+                    {
+                        <div class="status" id="pendente"></div>
+                    }
+                    @if (item.PedidoStatus() == 0)
+                    {
+                        <div class="status" id="vencido"></div>
+                    }
+                    @if (item.PedidoStatus() == 2)
+                    {
+                        <div class="status" id="valido"></div>
+                    }
+
+                    <a class="pad-right" asp-action="Edit" asp-route-id="@item.Id">
                         <img id="edit" src="~/edit.svg" alt="Editar" />
                     </a> 
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    
                     
                 </div>
             </td>
@@ -80,3 +89,4 @@
 }
     </tbody>
 </table>
+</div>

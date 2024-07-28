@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "My5c46LbwhJN0h9dT35nRgBKGuYmi3afWAiZMCMFiUs=",
+  "Hash": "fbv/688GEsbtPXfi6TlyTiC15dPmqiYR466ALXBSaZA=",
   "Source": "Crud1",
   "BasePath": "_content/Crud1",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Matheus\\source\\repos\\Crud1\\Crud1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Crud1.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Matheus\\source\\repos\\Crud1\\Crud1\\wwwroot\\add.svg",
+      "SourceId": "Crud1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Matheus\\source\\repos\\Crud1\\Crud1\\wwwroot\\",
+      "BasePath": "_content/Crud1",
+      "RelativePath": "add.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\add.svg"
     },
     {
       "Identity": "C:\\Users\\Matheus\\source\\repos\\Crud1\\Crud1\\wwwroot\\add-box.svg",
