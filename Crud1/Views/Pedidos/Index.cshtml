@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Crud1.Models.Pedido>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div id="btn-container">
+    <p>
+        <a id="add-btn" asp-action="Create">
+            Cadastrar
+        </a>
+    </p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vencimento)
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        
+            <tr asp-action="Details" asp-route-id="@item.Id">
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vencimento.Date)
+            </td>
+                @if (item.PedidoStatus() == 1)
+                {
+                    <td>
+                        <p id="pendente">Pendente</p>
+                    </td>
+                }
+                @if (item.PedidoStatus() == 0)
+                {
+                    <td>
+                        <p id="vencido">Vencido</p>
+                    </td>
+                }
+                @if (item.PedidoStatus() == 2)
+                {
+                    <td>
+                        <p id ="valido">Valido</p> 
+                    </td>
+                }
+            <td>
+                <div id="btn-container">
+                    <a asp-action="Edit" asp-route-id="@item.Id">
+                        <img id="edit" src="~/edit.svg" alt="Editar" />
+                    </a> 
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    
+                </div>
+            </td>
+           
+        </tr>
+        
+
+}
+    </tbody>
+</table>
