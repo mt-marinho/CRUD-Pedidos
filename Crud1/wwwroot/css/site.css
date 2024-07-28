@@ -27,6 +27,7 @@ td{
     vertical-align:middle;
 }
 
+
 header {
     display: flex;
     justify-content: center;
@@ -41,11 +42,11 @@ header {
 
 #add-btn {
     text-decoration: none;
-    padding: 3px;
-    color: #fff;
+    background-color:#004fff;
+    color: #00ff00;
     font-weight:600;
-    border: 2px solid #fff;
-    border-radius: 5px;
+    
+    border-radius: 10px;
 }
 
 
@@ -69,7 +70,7 @@ header {
 #valido {
     color: greenyellow;
     margin-bottom: 0;
-    background-color: greenyellow;
+    background-color: #003fff;
 }
 .table{
     background-color:white;
@@ -79,6 +80,7 @@ header {
 
 #details{
     text-decoration:none;
+    color: black;
 }
 .status{
     width:12px;
@@ -89,7 +91,7 @@ header {
 
 .container-table {
     border: 1px solid #3b3b3b;
-    background-color: #1e1e1e;
+    background-color: #e1e1e1;
     border-radius: 0 0 5px 5px;
 }
 
@@ -98,4 +100,7 @@ header {
 }
 .pad-left{
     padding-left:10px;
+}
+.tr-list:hover {
+    background-color: #e3efff;
 }
